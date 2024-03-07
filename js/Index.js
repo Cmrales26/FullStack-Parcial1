@@ -127,7 +127,11 @@ const CheckComment = () => {
 if (!$New_code) {
 } else {
   CheckComment();
-  document.querySelector("#LoginComment").classList.add("hide");
+  if (!authUser) {
+    document.querySelector("#LoginComment").classList.remove("hide");
+  } else {
+    document.querySelector("#LoginComment").classList.add("hide");
+  }
 }
 
 const saveComment = () => {
