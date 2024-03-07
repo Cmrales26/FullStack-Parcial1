@@ -10,6 +10,13 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: #fafafa;
 }
+html{
+  scroll-behavior: smooth;
+}
+
+.hide{
+  display: none;
+}
 
 .navbar {
   background-color: #ffff !important;

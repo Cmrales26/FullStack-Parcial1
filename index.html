@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -73,6 +73,9 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#footer">Contact</a>
+            </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -91,13 +94,31 @@
               </ul>
             </li>
             <li><hr /></li>
-            <li>
-              <button
+
+            <li class="nav-item dropdown hide" id="UserInfo">
+              <a
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" onclick="logOut()">Log Out</a></li>
+              </ul>
+            </li>
+
+            <li id="Btn_Sing_in">
+              <a
+                href="./html/login.html"
+                noreferrer
+                noopener
+                role="button"
                 class="btn bg-dark w-100"
                 style="width: 150px; color: white"
               >
                 Sign in
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -217,7 +238,7 @@
                   </h5>
                   <hr />
                   <div class="LinkNew">
-                    <a href=""
+                    <a href="./html/news/new1.html" noopener noreferrer
                       >Watch New <i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
@@ -239,7 +260,7 @@
                   </h5>
                   <hr />
                   <div class="LinkNew">
-                    <a href=""
+                    <a href="./html/news/new2.html" noopener noreferrer
                       >Watch New <i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
@@ -260,7 +281,7 @@
                   </h5>
                   <hr />
                   <div class="LinkNew">
-                    <a href=""
+                    <a href="./html/news/new3.html" noopener noreferrer
                       >Watch New <i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
@@ -283,7 +304,7 @@
                   </h5>
                   <hr />
                   <div class="LinkNew">
-                    <a href=""
+                    <a href="./html/news/new4.html" noopener noreferrer
                       >Watch New <i class="fa-solid fa-arrow-right"></i
                     ></a>
                   </div>
@@ -397,7 +418,7 @@
             <article class="new1 col-sm-6 mb-2">
               <div class="card bg-transparent border-0 rounded-0">
                 <img
-                  src="https://imageio.forbes.com/specials-images/imageserve/64cd6dbc6b73273736f2b761/Samsung-Galaxy-Z-Fold-5/0x0.jpg?format=jpg&crop=4029,2267,x0,y22,safe&width=1440"
+                  src="https://www.cnet.com/a/img/resize/e6aab2681f5ecf4c15ed7a0b4db0a6cfcc11478b/hub/2022/09/02/eff9ede2-9353-4c97-99e8-c5196f516d3d/p1020296.jpg?auto=webp&fit=crop&height=675&width=1200"
                   class="card-img-top rounded-0"
                   alt="New Samsung Leak Reveals Important Galaxy Z Fold 6 Decision"
                   loading="lazy"
@@ -552,7 +573,8 @@
       </aside>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer id="footer">
       <div class="bg-dark">
         <div class="footerinfo row m-0 px-5 pt-5">
           <article class="col-12 col-sm-6">
@@ -589,5 +611,6 @@
         </p>
       </div>
     </footer>
+    <script src="./js/Index.js"></script>
   </body>
 </html>

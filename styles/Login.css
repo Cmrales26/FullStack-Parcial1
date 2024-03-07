@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fs-7{
+    font-size: 15px;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #fafafa;
+    display: flex;
+    height: 100vh;
+}
+
+
+@media screen and (max-width: 768px) {
+    body{
+        justify-content: start !important;
+        align-items: start !important;
+    }
+    figure{
+        height: 200px;
+    }
+}
