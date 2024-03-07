@@ -191,3 +191,7 @@ const removeMyComment = () => {
   document.querySelector("#comment_Section").classList.remove("hide");
   document.querySelector("#Comment").classList.add("hide");
 };
+
+setTimeout(() => {
+  document.querySelector("#alert").classList.add("hide");
+}, 5000);
