@@ -52,7 +52,6 @@ const checkComments = () => {
   // If the user is not login
 
   if (!JSON.parse(authUser)) {
-    console.log("If the user is not login");
     let commentsHTML = "";
     // Each element of the vector is traversed and html injection is performed
     is_comment.forEach(function (comment) {
@@ -75,10 +74,7 @@ const checkComments = () => {
     (user) => user.user === JSON.parse(authUser).username
   );
 
-  console.log(is_user_comment);
-
   if (!is_user_comment) {
-    console.log("The user login don't have a comment in this new");
     let commentsHTML = "";
     is_comment.forEach(function (comment) {
       commentsHTML +=
@@ -101,7 +97,6 @@ const checkComments = () => {
     return user.user === JSON.parse(authUser).username;
   });
 
-  console.log("The user login Have a comment in this new");
   //Show the user login comment
   document.querySelector("#CommentValue").innerHTML = my_comment[0].comment;
   document.querySelector("#comment_Section").classList.add("hide");
@@ -174,7 +169,6 @@ const removeMyComment = () => {
   const LocalComments = JSON.parse(comments);
   const user = JSON.parse(authUser).username;
   //   Check if there is a comment in the new the user is watching
-  console.log();
   const is_comment = LocalComments.filter((c) => {
     return (
       // Take the values that are not the same with de news code but it is also not the same with the username of the user login
