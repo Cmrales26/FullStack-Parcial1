@@ -69,7 +69,7 @@ const checkComments = () => {
     return;
   }
 
-  //   Found a comment that has the same user that the user login
+  //Found a comment that has the same user that the user login
   const is_user_comment = is_comment.some(
     (user) => user.user === JSON.parse(authUser).username
   );
@@ -106,6 +106,11 @@ const checkComments = () => {
   const otherComments = is_comment.filter((user) => {
     return user.user !== JSON.parse(authUser).username;
   });
+
+  //If the user is login and have a comment but there are not more comments don't show the other comments section
+  if (otherComments.length <= 0) {
+    return;
+  }
 
   //Show the other comments
   let commentsHTML = "";
