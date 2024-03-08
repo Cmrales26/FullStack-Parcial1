@@ -129,8 +129,10 @@ if (!$New_code) {
   CheckComment();
   if (!authUser) {
     document.querySelector("#LoginComment").classList.remove("hide");
+    document.querySelector("#comment_Section").classList.add("hide");
   } else {
     document.querySelector("#LoginComment").classList.add("hide");
+    document.querySelector("#comment_Section").classList.remove("hide");
   }
 }
 
