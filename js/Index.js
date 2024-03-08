@@ -27,3 +27,7 @@ const logOut = () => {
   document.querySelector("#UserInfo").classList.add("hide");
   window.location.reload();
 };
+
+setTimeout(() => {
+  document.querySelector("#alert").classList.add("hide");
+}, 5000);
