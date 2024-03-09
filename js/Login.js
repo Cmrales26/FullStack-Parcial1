@@ -2,13 +2,13 @@ const $username = document.querySelector("#User");
 const $pass = document.querySelector("#Password");
 
 const login = () => {
-  if ($username.value === "") {
-    document.querySelector("#user_help").innerHTML = "Please Insert Username";
+  if ($username.value === "" || $username.value.trim() == "") {
+    document.querySelector("#user_help").innerHTML = "Username not allowed";
     setTimeout(() => remove_alert("#user_help"), 3000);
     return;
   }
-  if ($pass.value === "") {
-    document.querySelector("#pass_help").innerHTML = "Please Insert Password";
+  if ($pass.value === "" || $pass.value.trim() === "") {
+    document.querySelector("#pass_help").innerHTML = "Password not allowed ";
     setTimeout(() => remove_alert("#pass_help"), 3000);
     return;
   }
