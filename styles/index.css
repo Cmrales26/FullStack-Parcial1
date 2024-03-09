@@ -10,11 +10,12 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: #fafafa;
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
 
-.hide{
+.hide {
   display: none;
 }
 
@@ -57,22 +58,25 @@ aside {
   left: 0;
   height: 100%;
   overflow: auto;
-  .card-title{
+
+  .card-title {
     min-height: 50px;
   }
 }
 
-.social{
-  a{
+.social {
+  a {
     text-decoration: none;
     color: white;
     text-align: center;
-    i{
+
+    i {
       font-size: 30px;
       margin-bottom: 1rem;
     }
   }
-  li{
+
+  li {
     list-style: none;
   }
 }
@@ -96,9 +100,10 @@ aside {
       font-size: 10px !important;
     }
   }
-    .fs-10 {
-      font-size: 10px !important;
-    }
+
+  .fs-10 {
+    font-size: 10px !important;
+  }
 
   .news {
     width: fit-content;
@@ -106,6 +111,11 @@ aside {
 
   aside {
     position: initial;
+  }
+
+  .container {
+    max-width: 100%;
+
   }
 
 }
