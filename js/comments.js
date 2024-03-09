@@ -135,7 +135,24 @@ const saveComment = () => {
     return;
   }
 
-  if ($comment_Data.value === "") {
+  if ($comment_Data.value === "" || $comment_Data.value.trim() === "") {
+    const alertPlaceholder = document.querySelector("#liveAlertPlaceholder");
+
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = [
+      `<div class="alert alert-danger alert-dismissible" role="alert" id="myAlert">`,
+      `   <div>Please insert your comment after submit</div>`,
+      '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+      "</div>",
+    ].join("");
+
+    alertPlaceholder.append(wrapper);
+
+    setTimeout(() => {
+      const alert = bootstrap.Alert.getOrCreateInstance("#myAlert");
+      alert.close();
+    }, 3000);
+
     return;
   }
   if (!authUser) {
